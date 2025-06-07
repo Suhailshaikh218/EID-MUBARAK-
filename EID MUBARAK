@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eid Mubarak | From Suhail Shaikh </title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #fdfcfb, #e2d1c3);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: backgroundFade 10s infinite alternate;
+    }
+
+    .card {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 50px 30px;
+      border-radius: 30px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+      max-width: 90%;
+      width: 400px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: #0a4d2f;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #d5f5e3;
+    }
+
+    .moon {
+      font-size: 4em;
+      animation: swing 5s infinite ease-in-out;
+      color: gold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #333;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .username {
+      margin-top: 20px;
+      font-size: 1.3em;
+      color: #0a3d62;
+      font-weight: bold;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 1em;
+      color: #555;
+      font-style: italic;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes swing {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(10deg); }
+    }
+
+    @keyframes backgroundFade {
+      0% { background: linear-gradient(to right, #fdfcfb, #e2d1c3); }
+      100% { background: linear-gradient(to right, #fefcea, #f1da36); }
+    }
+
+    @media (max-width: 500px) {
+      h1 { font-size: 2.2em; }
+      .moon { font-size: 3em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="moon">🌙</div>
+    <h1>Eid Mubarak!</h1>
+    <p>May Allah fill your life with happiness,<br>peace and prosperity on this blessed day 🌸</p>
+    <p class="username" id="username"></p>
+    <div class="footer">— Regards, Suhail Shaikh </div>
+  </div>
+
+  <script>
+    const user = prompt(" Please Enter Your Name? ");
+    const nameElement = document.getElementById("username");
+    if (user) {
+      nameElement.textContent = "🎉 Specially for: " + user;
+    }
+  </script>
+</body>
+</html>
